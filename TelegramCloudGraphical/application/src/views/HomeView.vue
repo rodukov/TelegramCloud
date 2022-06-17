@@ -17,29 +17,29 @@
                         <div class="telegram-item">
                             <div class="gen-img-c" id="avatar-purple"></div>
                             <div class="text-fsaa-items">
-                                <div><p class="res fsaa-name">Awesome Photos</p></div>
-                                <div><p class="res fsaa-description">My awesome photo</p></div>
+                                <div><p class="res fsaa-name unselectable">Awesome Photos</p></div>
+                                <div><p class="res fsaa-description unselectable">My awesome photo</p></div>
                             </div>
                         </div>
                         <div class="telegram-item">
                             <div class="gen-img-c" id="avatar-blue"></div>
                             <div class="text-fsaa-items">
-                                <div><p class="res fsaa-name">Music Archive</p></div>
-                                <div><p class="res fsaa-description">Niztes - River</p></div>
+                                <div><p class="res fsaa-name unselectable">Music Archive</p></div>
+                                <div><p class="res fsaa-description unselectable">Niztes - River</p></div>
                             </div>
                         </div>
                         <div class="telegram-item">
                             <div class="gen-img-c" id="avatar-orange"></div>
                             <div class="text-fsaa-items">
-                                <div><p class="res fsaa-name">Books Archive</p></div>
-                                <div><p class="res fsaa-description">Rich dad and poor dad</p></div>
+                                <div><p class="res fsaa-name unselectable">Books Archive</p></div>
+                                <div><p class="res fsaa-description unselectable">Rich dad and poor dad</p></div>
                             </div>
                         </div>
                         <div class="telegram-item" style="background: #2B5378">
                             <div class="gen-img-c" id="avatar-green"></div>
                             <div class="text-fsaa-items">
-                                <div><p class="res fsaa-name">My secret diary</p></div>
-                                <div><p class="res fsaa-description" style="color: white;">Dear Diary! Today for the first time...</p></div>
+                                <div><p class="res fsaa-name unselectable">My secret diary</p></div>
+                                <div><p class="res fsaa-description unselectable" style="color: white;">Dear Diary! Today for the first time...</p></div>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
     
                 <div class="content-viewer">
                     <div class="file-item">
-                        <div><p class="res filetext">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        <div><p class="res filetext" style="padding-bottom: 0;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -55,16 +55,18 @@
                             sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
                             Aldus PageMaker including versions of Lorem Ipsum.</p></div>
                             <div class="fileimg-container">
-                                <div><img class="res fileimage" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>
-                                <div><img class="res fileimage" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>  
-                                <div><img class="res fileimage" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>      
+                                <div><img class="res fileimage unselectable" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>
+                                <div><img class="res fileimage unselectable" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>  
+                                <div><img class="res fileimage unselectable" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>      
 
                             </div>
+                        <p class="res time unselectable">18:31</p>
                 
                     </div>
 
                     <div class="file-item">
-                        <div><img class="res fileimage" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>
+                        <div><img class="res fileimage unselectable" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"></div>
+                        <p class="res time unselectable">12:58</p>
                     </div>
 
                     <div class="file-item">
@@ -75,7 +77,7 @@
                             remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
                             sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
                             Aldus PageMaker including versions of Lorem Ipsum.</p></div>
-                
+                        <p class="res time unselectable">19:19</p>
                     </div>
 
                 </div>
@@ -88,6 +90,11 @@
 <script>
 export default {
   name: 'MainWindow',
+  data() {
+    return {
+
+    }
+  },
   mounted() {
     document.title = "Telegram Cloud"
   }
@@ -95,6 +102,7 @@ export default {
 </script>
 
 <style scoped>
+.time { text-align: right; padding: 5px; color: #879AAC; font-family: 'mono'; }
             .res { margin: 0; } /* reset paragraph margin */
             .search-container {
                 background: rgb(32, 32, 70);
@@ -204,16 +212,14 @@ export default {
                 border-radius: 5px;
                 transition: .3s;
                 margin: 20px;
-            }
-            .fileimage:hover {
-                transform: translateY(-5px);
-                z-index: 2;
+                margin-bottom: 0px;
             }
             .content-viewer {
                 background-color: #0E1621;
                 padding: 7.5px;
                 border-radius: 0px 0px 0px 20px;
-                min-height: 610px;
+                max-height: 565px;
+                overflow: auto;
             }
             .fileimg-container {
                 display: grid;
