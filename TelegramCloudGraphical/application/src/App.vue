@@ -1,30 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+::-webkit-scrollbar { height: 6px; width: 5px; background: #17212B;}
+::-webkit-scrollbar-thumb { background: #83838370; -webkit-border-radius: 5px; -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75); }
+::-webkit-scrollbar-corner { background: #17212B; }
+::selection { background: rgba(29, 149, 219, 0.623); color: rgb(255, 255, 255); }
 
-nav {
-  padding: 30px;
-}
+html, body { min-height: 100%; }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+body { background: #17212B; margin: 0; padding-bottom: 25px; }
 </style>
