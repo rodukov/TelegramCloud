@@ -47,7 +47,7 @@
     
                 <div class="content-viewer">
                     <div class="file-item">
-                        <div><p class="res filetext" style="padding-bottom: 0;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        <div><p class="res filetext">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -97,12 +97,14 @@ export default {
   },
   mounted() {
     document.title = "Telegram Cloud"
+
+
   }
 }
 </script>
 
 <style scoped>
-.time { text-align: right; padding: 5px; color: #879AAC; font-family: 'mono'; }
+.time { text-align: right; padding: 5px; color: #879AAC; font-family: 'arial'; font-size: 14px; }
             .res { margin: 0; } /* reset paragraph margin */
             .search-container {
                 background: rgb(32, 32, 70);
@@ -203,6 +205,7 @@ export default {
             }
             .filetext {
                 padding: 20px;
+                padding-bottom: 0;
             }
             .fileimage {
                 max-height: 300px;
@@ -218,7 +221,7 @@ export default {
                 background-color: #0E1621;
                 padding: 7.5px;
                 border-radius: 0px 0px 0px 20px;
-                max-height: 565px;
+                max-height: 555px;
                 overflow: auto;
             }
             .fileimg-container {
